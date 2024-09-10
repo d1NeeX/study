@@ -1,0 +1,15 @@
+div>p {
+    color: blue;
+}
+
+p+div {
+    color: red;
+}
+
+ul li {
+    color: blueviolet;
+}
+
+div span {
+    color: aqua;
+}
