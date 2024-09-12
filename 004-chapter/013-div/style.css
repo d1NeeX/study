@@ -1,0 +1,14 @@
+.container {
+    margin: 20px;
+    border: 10px solid blue;
+}
+
+div {
+    text-align: center;
+    padding: 20px;
+    border: 10px solid black;
+}
+
+.box {
+    margin: 15px;
+}
