@@ -1,0 +1,25 @@
+.rectangle {
+    margin: 10px;
+    padding: 10px;
+}
+
+#rectangle1 {
+    background-color: red;
+    width: 100px;
+    height: 50px;
+    display: inline-block;
+}
+
+#rectangle2 {
+    background-color: blue;
+    width: 100px;
+    height: 50px;
+    display: inline-block;
+}
+
+#rectangle3 {
+    background-color: brown;
+    width: 100px;
+    height: 50px;
+    display: inline-block;
+}
