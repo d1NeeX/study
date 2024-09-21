@@ -1,0 +1,48 @@
+.contrast-container {
+    border: 5px solid blueviolet;
+    display: inline-flex;
+    flex-direction: column;
+}
+
+.color-box {
+    padding: 10px;
+    margin: 1px;
+    display: flex;
+    font-size: 18px;
+    color: white;
+    font-weight: bold;
+    height: 60px;
+    flex-basis: 60px;
+}
+
+.color1 {
+    background-color: #0000ff;
+}
+
+.color2 {
+    background-color: #e74c3c;
+}
+
+.color3 {
+    background-color: #2ecc71;
+}
+
+.color4 {
+    background-color: #f39c12;
+}
+
+.color5 {
+    background-color: #9b59b6;
+}
+
+.color6 {
+    background-color: #1abc9c;
+}
+
+.color7 {
+    background-color: #e67e22;
+}
+
+.color8 {
+    background-color: #34495e;
+}
