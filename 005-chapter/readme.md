@@ -36,5 +36,5 @@
 ```
 ```json
 "code-runner.executorMap": {
-    "javascript": "clear && echo \">>> \"$fileName && cd $dir && node $fileName",
+    "javascript": "clear && echo \">>> \"$fileName && cd $dir && node $fileName",}
 ```
