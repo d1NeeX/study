@@ -1,45 +1,36 @@
-function calculateTipAmount(billAmount, tipPercentage) {
-    return billAmount * (tipPercentage / 100);
+function calculatetip(summary, percent) {
+    sum = Number.parseInt(summary);
+    per = Number.parseInt(percent);
+    const tip = document.getElementById("tipAmount");
+    let total_tip = sum * per / 100;
+    tip.textContent = total_tip;
 }
 
-function calculateTotalAmount(billAmount, tipAmount) {
-    return billAmount + tipAmount;
+function finalsumm(summary, percent) {
+    sum = Number.parseInt(summary);
+    per = Number.parseInt(percent);
+    const fnsum = document.getElementById("totalAmount");
+    let summ = sum + sum * per / 100;
+    fnsum.textContent = summ;
 }
 
-function calculatePerPersonAmount(totalAmount, numberOfPeople) {
-    return totalAmount / numberOfPeople;
+function summ0nPerson(summary, percent, n) {
+    sum = Number.parseInt(summary);
+    per = Number.parseInt(percent);
+    count = Number.parseInt(n);
+    const personsum = document.getElementById("perPersonAmount");
+    let person_sum = (sum + sum * per / 100) / count;
+    personsum.textContent = person_sum;
 }
 
-// Получаем ссылку на кнопку
-var calculateButton = document.getElementById("calculateButton");
+const cb = document.getElementById("calculateButton");
 
-// Назначаем обработчик события на кнопку
-calculateButton.addEventListener("click", function () {
-    // Получаем значения из полей ввода
-    var billAmount = parseInt(document.getElementById("billAmount").value);
-    var tipPercentage = parseInt(document.getElementById("tipPercentage").value);
-    var numberOfPeople = parseInt(document.getElementById("numberOfPeople").value);
+const summ = document.getElementById("billAmount").value;
+const percent = document.getElementById("tipPercentage").value;
+const personcount = document.getElementById("numberOfPeople").value;
 
-    // Проверяем, все ли поля заполнены корректно
-    if (isNaN(billAmount)
-        || isNaN(tipPercentage)
-        || isNaN(numberOfPeople)
-        || billAmount <= 0
-        || tipPercentage < 0
-        || numberOfPeople <= 0) {
-        alert("Пожалуйста, введите корректные значения.");
-        return;
-    }
-
-    // Вычисляем чаевые и общую сумму
-    var tipAmount = calculateTipAmount(billAmount, tipPercentage);
-    var totalAmount = calculateTotalAmount(billAmount, tipAmount);
-
-    // Вычисляем сумму для каждого человека
-    var perPersonAmount = calculatePerPersonAmount(totalAmount, numberOfPeople);
-
-    // Выводим результаты
-    document.getElementById("tipAmount").innerText = tipAmount.toFixed(2);
-    document.getElementById("totalAmount").innerText = totalAmount.toFixed(2);
-    document.getElementById("perPersonAmount").innerText = perPersonAmount.toFixed(2);
+cb.addEventListener("click", function () {
+    calculatetip(summ, percent);
+    finalsumm(summ, percent);
+    summ0nPerson(summ, percent, personcount);
 });
