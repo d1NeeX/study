@@ -1,35 +1,35 @@
 function calculatetip(summary, percent) {
-    sum = Number.parseInt(summary);
-    per = Number.parseInt(percent);
+    let sum = Number.parseFloat(summary);
+    let per = Number.parseFloat(percent);
     const tip = document.getElementById("tipAmount");
     let total_tip = sum * per / 100;
-    tip.textContent = total_tip;
+    tip.textContent = total_tip.toFixed(2);
 }
 
 function finalsumm(summary, percent) {
-    sum = Number.parseInt(summary);
-    per = Number.parseInt(percent);
+    let sum = Number.parseFloat(summary);
+    let per = Number.parseFloat(percent);
     const fnsum = document.getElementById("totalAmount");
-    let summ = sum + sum * per / 100;
-    fnsum.textContent = summ;
+    let summ = sum + (sum * per / 100);
+    fnsum.textContent = summ.toFixed(2);
+    return summ;  // Возвращаем общую сумму для использования в других функциях
 }
 
 function summ0nPerson(summary, percent, n) {
-    sum = Number.parseInt(summary);
-    per = Number.parseInt(percent);
-    count = Number.parseInt(n);
+    let sum = Number.parseFloat(summary);
+    let per = Number.parseFloat(percent);
+    let count = Number.parseFloat(n);
     const personsum = document.getElementById("perPersonAmount");
-    let person_sum = (sum + sum * per / 100) / count;
-    personsum.textContent = person_sum;
+    let person_sum = finalsumm(sum, per) / count;
+    personsum.textContent = person_sum.toFixed(2);
 }
 
 const cb = document.getElementById("calculateButton");
-
-const summ = document.getElementById("billAmount").value;
-const percent = document.getElementById("tipPercentage").value;
-const personcount = document.getElementById("numberOfPeople").value;
-
 cb.addEventListener("click", function () {
+    let summ = document.getElementById("billAmount").value;
+    let percent = document.getElementById("tipPercentage").value;
+    let personcount = document.getElementById("numberOfPeople").value;
+
     calculatetip(summ, percent);
     finalsumm(summ, percent);
     summ0nPerson(summ, percent, personcount);
