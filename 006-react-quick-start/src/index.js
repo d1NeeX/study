@@ -1,10 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
+import './css/index.css';
+import HomePage from './Layout/HomePage/HomePage';
+import MyComponents from './Layout/Hooks/MyComponents';
 
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
+
 root.render(
-  <h1>Hello world</h1>
+  //<MyComponents />
+  <HomePage />
 );
